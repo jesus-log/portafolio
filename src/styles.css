@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme {
+  --animate-typing: typing 3s steps(30, end) forwards;
+  --animate-blink: blink .7s step-end infinite;
+  --animate-grow-down: grow-down 1.5s ease-out forwards;
+  --animate-grow-right: grow-right 1.5s ease-out forwards;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 70vw;
+  }
+  /* Ajusta al largo del texto */
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    border-color: transparent;
+  }
+  50%,
+  100% {
+    border-color: currentColor;
+  }
+}
+
+@keyframes grow-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: 90%
+  }
+}
+  /* Puedes ajustar a 50%, 80%, etc */
+
+  @keyframes grow-right {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
