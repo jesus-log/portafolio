@@ -3,20 +3,43 @@
 
 
 @theme {
-  --animate-typing: typing 3s steps(30, end) forwards;
+  --animate-typing: typing 2.0s steps(30, end) forwards;
+  --animate-typing-delete: typing-delete 1.5s steps(30, end) forwards;
   --animate-blink: blink .7s step-end infinite;
-  --animate-grow-down: grow-down 1.5s ease-out forwards;
-  --animate-grow-right: grow-right 1.5s ease-out forwards;
+  --animate-grow-down: grow-down .7s ease-out forwards;
+  --animate-grow-down-inverse: grow-down-inverse 1s ease-out forwards;
+  --animate-grow-right: grow-right 0.5s ease-out forwards;
+  --animate-grow-right-inverse: grow-right-inverse 1s ease-out forwards;
+  --animate-fill: fill .5s ease-out forwards;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-fade-out-lines: fade-out-lines 3s ease-out forwards;
+  --animate-pulse-soft: pulse-soft 1.5s ease-in-out infinite;
+  --animate-bg-shift:bg-shift 120s ease-in-out infinite;
+  --animate-font-shift:font-shift 120s ease-in-out infinite;
 
 }
 
 @keyframes typing {
   from {
-    width: 0vw;
+    width: 0%;
   }
+
   to {
-    width: 70vw;
+    width: 100%;
   }
+
+  /* Ajusta al largo del texto */
+}
+
+@keyframes typing-delete {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+
   /* Ajusta al largo del texto */
 }
 
@@ -26,6 +49,7 @@
   50% {
     border-color: transparent;
   }
+
   50%,
   100% {
     border-color: currentColor;
@@ -36,17 +60,125 @@
   from {
     height: 0;
   }
+
   to {
     height: 90%
   }
 }
-  /* Puedes ajustar a 50%, 80%, etc */
 
-  @keyframes grow-right {
+@keyframes grow-down-inverse {
+  from {
+    height: 90%;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+/* Puedes ajustar a 50%, 80%, etc */
+
+@keyframes grow-right {
   from {
     width: 0;
   }
+
   to {
-    width: 90%;
+    width: 98%;
+  }
+}
+
+@keyframes grow-right-inverse {
+  from {
+    width: 98%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out-lines {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulse-soft {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bg-shift {
+  0% {
+    background-color: #fef3c6;
+  }
+
+
+  33% {
+    background-color: #242426;
+  }
+
+
+  66% {
+    background-color: #e67a7a;
+  }
+
+   100% {
+    background-color: #fef3c6;
+  }
+}
+
+@keyframes font-shift {
+  0% {
+    color: black;
+  }
+
+
+  33% {
+    color: #26fc34;
+  }
+
+  66% {
+    color: white;
+  }
+
+  100% {
+    color: black;
   }
 }
