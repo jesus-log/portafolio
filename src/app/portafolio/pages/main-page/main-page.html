@@ -1,4 +1,4 @@
-<div class="flex items-center  h-[calc(100vh-133px)] animate-bg-shift [animation-delay:9s]">
+<div class="flex items-center  h-[calc(100vh-133px)] "> <!-- animate-bg-shift [animation-delay:9s] -->
   <!-- linea horizontal -->
   <div class=" absolute top-[65px] left-[1%] h-[1px]  bg-black origin-left"
     [class]=" loading() ? 'w-0 animate-grow-right [animation-delay:1.5s]' : 'animate-grow-right-inverse w-[98%] [animation-delay:1s]' ">
@@ -21,7 +21,9 @@
 
 
 
-  <div class="fixed left-[2%] text-xs sm:left-[10%]  lg:text-xl xl:text-2xl xl:left-[12%] font-mono flex animate-font-shift [animation-delay:9s]">
+  <div
+    class="m-auto text-xs lg:text-xl xl:text-2xl font-mono flex ">
+   <!--  <b>&lbrace; &nbsp;</b> --> <!-- animate-font-shift [animation-delay:9s] -->
     @if (this.fraseNumber() == 0 || this.fraseNumber() == 1) {
     <span class="overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'w-0 animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
@@ -36,7 +38,7 @@
     }
     @if (this.fraseNumber() == 4 || this.fraseNumber() == 5) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Expecializado en
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Especializado en
       <b>Angular 19</b>
       <p class="hidden md:inline">, frontend basado en <b>señales</b> y <b>observables</b> con <b>rxjs</b></p>
     </span>
@@ -44,17 +46,17 @@
 
     @if (this.fraseNumber() == 6 || this.fraseNumber() == 7) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Login con
-      <b>JWTs</b>
-      <p class="hidden md:inline">, formularios reactivos, <b>pipes personalizados</b>, routing, <b>guards</b>
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Puedes ver mis <b>pulls</b> diarios en
+      <b>GitHub</b>
+      <p class="hidden md:inline"> con el enlace que hay en el <b>footer</b>
       </p>
     </span>
     }
     @if (this.fraseNumber() == 8 || this.fraseNumber() == 9) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      En backend, he trabajado con <b>JAVA, PHP</b>
-      <p class="hidden md:inline"><b> y Node</b>, ademas de <b>MYSQL</b>, <b>PostgreSQL</b></p>
+      En backend, he trabajado con <b>JAVA</b>,<b> PHP</b>
+      <p class="hidden md:inline"> y <b> Node</b>, además de <b>MYSQL</b>, <b>PostgreSQL</b></p>
     </span>
     }
     @if (this.fraseNumber() == 10 || this.fraseNumber() == 11) {
@@ -76,13 +78,24 @@
     @if (this.fraseNumber() == 14 || this.fraseNumber() == 15) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      Con experiencia en metodología <b>Scrum</b>
-      <p class="hidden md:inline">, con <b>sprints</b> y realizando dialys</p>
+      Experiencia en metodología <b>Scrum</b>
+      <p class="hidden md:inline">, con <b>sprints</b> y <b>dialys</b></p>
     </span>
     }
+
+<!--     @if (this.fraseNumber() == 16 || this.fraseNumber() == 17) {
+    <span class="w-0 overflow-hidden whitespace-nowrap"
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Login con
+      <b>JWTs</b>
+      <p class="hidden md:inline">, formularios reactivos, <b>pipes personalizados</b>, routing, <b>guards</b>
+      </p>
+    </span>
+    } -->
+
 
 
     <!-- Cursor independiente -->
     <span class="border-r-2 animate-blink">&nbsp;</span>
+
   </div>
 </div>
