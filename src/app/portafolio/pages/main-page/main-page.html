@@ -1,4 +1,6 @@
 <div class="flex items-center  h-[calc(100vh-133px)] "> <!-- animate-bg-shift [animation-delay:9s] -->
+
+
   <!-- linea horizontal -->
   <div class=" absolute top-[65px] left-[1%] h-[1px]  bg-black origin-left"
     [class]=" loading() ? 'w-0 animate-grow-right [animation-delay:1.5s]' : 'animate-grow-right-inverse w-[98%] [animation-delay:1s]' ">
@@ -22,7 +24,7 @@
 
 
   <div
-    class="m-auto text-xs lg:text-xl xl:text-2xl font-mono flex ">
+    class="mx-auto text-xs lg:text-xl xl:text-2xl font-mono flex ">
    <!--  <b>&lbrace; &nbsp;</b> --> <!-- animate-font-shift [animation-delay:9s] -->
     @if (this.fraseNumber() == 0 || this.fraseNumber() == 1) {
     <span class="overflow-hidden whitespace-nowrap"
@@ -46,7 +48,7 @@
 
     @if (this.fraseNumber() == 6 || this.fraseNumber() == 7) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Puedes ver mis <b>pulls</b> diarios en
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Puedes ver mis <b>commits</b> diarios en
       <b>GitHub</b>
       <p class="hidden md:inline"> con el enlace que hay en el <b>footer</b>
       </p>

@@ -1,47 +1,53 @@
 <div class="w-full">
   <div class="navbar opacity-0 w-0 bg-base-100 shadow-sm animate-fill [animation-delay:2.5s]">
-  <div class=" ml-3 navbar-start opacity-0 animate-fade-in [animation-delay:2.9s]">
-    <div class="dropdown">
-       <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-        <div class="w-10 rounded-full">
-          <img
-            alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+    <div class=" ml-3 navbar-start opacity-0 animate-fade-in [animation-delay:2.9s]">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <img alt="Tailwind CSS Navbar component"
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+          </div>
         </div>
+        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+          <li><a routerLink="">Inicio</a></li>
+          <li><a routerLink="proyectos">Proyectos</a></li>
+<!--           <li>
+            <a>Parent</a>
+            <ul class="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </li>
+          <li><a>Item 3</a></li> -->
+        </ul>
       </div>
-      <ul
-        tabindex="-1"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
+      <div class="opacity-0 ml-3 animate-fade-in [animation-delay:7s]">
+        <h3 class="inline" > <b>Jesús Logroño</b></h3>
+        <svg class="ml-1 inline" width="10" height="10" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="12" fill="#0095F6" />
+          <path d="M17 8.5l-6.2 6.2L7 10.9" stroke="white" stroke-width="2.2" fill="none" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <div class="navbar-center hidden lg:flex opacity-0 animate-fade-in [animation-delay:3.2s]">
+      <ul class="menu menu-horizontal px-1">
+        <li><a routerLink="proyectos">Ver proyectos</a></li>
+<!--         <li>
+          <details>
+            <summary>Parent</summary>
+            <ul class="p-2 bg-base-100 w-40 z-1">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </details>
         </li>
-        <li><a>Item 3</a></li>
+        <li><a>Item 3</a></li> -->
       </ul>
     </div>
+    <div class="navbar-end animate-fade-in opacity-0 [animation-delay:3.4s] mr-3">
+      <a class="btn btn-accent animate-pulse-soft [animation-delay:4.5s]">Descargar Curriculum</a>
+    </div>
   </div>
-  <div class="navbar-center hidden lg:flex opacity-0 animate-fade-in [animation-delay:3.2s]">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end animate-fade-in opacity-0 [animation-delay:3.4s] mr-3">
-    <a class="btn btn-accent animate-pulse-soft [animation-delay:4.5s]">Descargar Curriculum</a>
-  </div>
-</div>
 
 </div>
