@@ -1,0 +1,14 @@
+<div class="h-full w-full flex flex-col bg-amber-50 p-5 ">
+  <div class="w-full m-2 h-[10%] bg-amber-700">
+    <h1 class="menu-title">Filtros</h1>
+  </div>
+  <h2 class="mt-10 mb-5">Selecciona un proyecto</h2>
+  <div class="mx-0.5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 flex-1 overflow-auto">
+    @for (proyect of this.proyects(); track proyect.id) {
+    <div class="">
+      <img class="max-w-full rounded-base cursor-pointer rounded hover:opacity-70" [src]="proyect.img" alt="" (click)="getProyect(proyect)">
+    </div>
+    }
+  </div>
+
+</div>

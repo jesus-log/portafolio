@@ -1,0 +1,26 @@
+<div class="w-full h-full bg-amber-900 flex flex-col">
+  <h1 class=" w-full text-3xl font-extrabold my-9 text-center">{{proyect()?.title}} </h1>
+  <div class="w-full h-[64%] bg-amber-100 flex items-center">
+    <img [src]="proyect()?.img" alt="" class=" w-[20%] ml-20 mr-10 object-contain">
+
+    <div class="h-[80%] w-full mr-15 bg-amber-50 flex justify-center items-center">
+      <div class="w-[50%] h-full p-4 flex justify-center items-center">
+        {{proyect()?.description}}
+      </div>
+      <div class="w-[50%] h-full p-4 flex justify-center items-center">
+        {{proyect()?.description}}
+      </div>
+
+    </div>
+  </div>
+  <div class="m-5 p-4 bg-amber-50 flex justify-center items-center">
+    @for (tec of proyect()?.tecnologies; track $index) {
+    <div class="mx-4">
+      <h3 class="w-full text-center mb-2">{{tec.name}}</h3>
+      <img [src]="tec.img" alt="" class="w-10">
+    </div>
+
+    }
+
+  </div>
+</div>
