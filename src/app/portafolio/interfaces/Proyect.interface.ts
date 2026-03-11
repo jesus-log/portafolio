@@ -3,6 +3,7 @@ export  interface Proyect{
   title: string,
   description: string,
   img:string,
+  video?: string,
   caracteristics: caracteristic[],
   tecnologies: Tecnology [],
 }

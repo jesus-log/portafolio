@@ -1,14 +1,38 @@
-<div class="h-full w-full flex flex-col bg-amber-50 p-5 ">
-  <div class="w-full m-2 h-[10%] bg-amber-700">
-    <h1 class="menu-title">Filtros</h1>
+<div class="h-full w-full flex flex-col pr-10 pl-5 pt-5">
+  <div class="w-full m-2 flex flex-col items-center justify-center text-center">
+    <label class="sr-only" for="technology-filter">Filtrar por tecnologia</label>
+    <select
+      #technologyFilter
+      id="technology-filter"
+      class="select select-sm w-full max-w-xs mt-3 mb-5 self-center border-zinc-300 bg-zinc-100 text-zinc-700 font-sans shadow-sm outline-none focus:border-zinc-400 focus:bg-white"
+      [value]="selectedTechnology()"
+      (change)="filterByTechnology(technologyFilter.value)"
+    >
+      <option value="all">Todas las tecnologias</option>
+      @for (technology of technologies(); track technology) {
+      <option [value]="technology">{{ technology }}</option>
+      }
+    </select>
   </div>
-  <h2 class="mt-10 mb-5">Selecciona un proyecto</h2>
-  <div class="mx-0.5 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 flex-1 overflow-auto">
-    @for (proyect of this.proyects(); track proyect.id) {
-    <div class="">
-      <img class="max-w-full rounded-base cursor-pointer rounded hover:opacity-70" [src]="proyect.img" alt="" (click)="getProyect(proyect)">
+
+  <div #swiperContainer class="swiper mySwiper w-[80%] mb-10 flex-1 min-w-0 overflow-hidden">
+    @if (proyects().length === 0) {
+    <div class="h-full flex items-center justify-center text-center text-sm opacity-70">
+      No hay proyectos para esta tecnologia
     </div>
     }
+
+    <div class="swiper-wrapper ">
+      @for (proyect of this.proyects(); track proyect.id) {
+      <div class="swiper-slide relative overflow-hidden flex items-center justify-center text-center rounded-lg cursor-grab text-white font-bold text-base px-3 {{colors[$index % colors.length]}}">
+        @if (proyect.video) {
+        <video class="absolute inset-0 w-full h-full object-cover" [src]="proyect.video" autoplay loop muted playsinline></video>
+        <div class="absolute inset-0 bg-black/20"></div>
+        }
+        <span class="relative z-10">{{proyect.title}}</span>
+      </div>
+      }
+    </div>
   </div>
 
 </div>

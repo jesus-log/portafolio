@@ -1,15 +1,16 @@
-<div class="h-[calc(100vh-133px)] w-screen flex ">
+<div class="relative overflow-hidden h-[calc(100vh-133px)] w-screen flex">
+  @if (proyect()?.video) {
+  <video class="absolute inset-0 w-full h-full object-cover blur-lg scale-110" [src]="proyect()?.video" autoplay loop muted playsinline></video>
+  <div class="absolute inset-0 bg-black/60"></div>
+  }
 
+  <div class="relative z-10 w-full h-full flex">
+    <!-- Selector proyectos -->
+    <proyects-selector (proyect)="setProyect($event)"></proyects-selector>
+    <!-- selector proyectos -->
 
-<!-- Selector proyectos -->
-<proyects-selector (proyect)="setProyect($event)"></proyects-selector>
-<!-- selector proyectos -->
-
-
-
-<!-- Ficha proyecto -->
-<proyect-detail [proyect]="proyect()"></proyect-detail>
-<!-- ficha proyecto -->
-
-
+    <!-- Ficha proyecto -->
+    <proyect-detail [proyect]="proyect()"></proyect-detail>
+    <!-- ficha proyecto -->
+  </div>
 </div>

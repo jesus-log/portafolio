@@ -8,6 +8,7 @@ const proyects: Proyect[] = [
     title: 'E‑commerce',
     description: 'Aplicación e‑commerce desarrollada con Angular 19 que incluye autenticación de usuarios, catálogo de productos y un panel de administración para gestionar el inventario. Permite añadir, editar y eliminar productos mediante una interfaz intuitiva y segura.',
     img: 'https://picsum.photos/400/300?random=1',
+    video: 'videos/tesloShopVd.mp4',
     caracteristics: [
 
       {
@@ -98,6 +99,7 @@ const proyects: Proyect[] = [
     description:
       "Aplicación de comercio electrónico enfocada en moda urbana. Incluye autenticación de usuarios, carrito persistente y un panel de administración para gestionar productos, inventario e imágenes.",
     img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    video: '',
     caracteristics: [
       {
         title: "Autenticación de usuarios",
@@ -141,6 +143,7 @@ const proyects: Proyect[] = [
     description:
       "Plataforma para gestionar proyectos, tareas y equipos. Incluye autenticación, roles de usuario y un panel avanzado con estadísticas y gráficos.",
     img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
+    video: '',
     caracteristics: [
       {
         title: "Autenticación de usuarios",

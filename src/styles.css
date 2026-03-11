@@ -1,5 +1,34 @@
 @import "tailwindcss";
+@import 'swiper/css';
 @plugin "daisyui";
+
+
+
+/* .swiper-button-next { right: 10px; } */
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+
+
 
 
 @theme {
@@ -14,8 +43,8 @@
   --animate-fade-in: fade-in 0.8s ease-out forwards;
   --animate-fade-out-lines: fade-out-lines 3s ease-out forwards;
   --animate-pulse-soft: pulse-soft 1.5s ease-in-out infinite;
-  --animate-bg-shift:bg-shift 120s ease-in-out infinite;
-  --animate-font-shift:font-shift 120s ease-in-out infinite;
+  --animate-bg-shift: bg-shift 120s ease-in-out infinite;
+  --animate-font-shift: font-shift 120s ease-in-out infinite;
 
 }
 
@@ -159,7 +188,7 @@
     background-color: #e67a7a;
   }
 
-   100% {
+  100% {
     background-color: #fef3c6;
   }
 }
