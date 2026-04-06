@@ -1,3 +1,9 @@
-<nav-bar></nav-bar>
-<router-outlet/>
-<app-footer></app-footer>
+@if (!isProyectsRoute()) {
+	<nav-bar></nav-bar>
+}
+
+<router-outlet></router-outlet>
+
+@if (!isProyectsRoute()) {
+	<app-footer></app-footer>
+}

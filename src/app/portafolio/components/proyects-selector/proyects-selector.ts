@@ -9,7 +9,7 @@ import 'swiper/css/effect-cards';
   selector: 'proyects-selector',
   imports: [],
   templateUrl: './proyects-selector.html',
-  host: { class: 'w-[40%] min-w-0' }
+  host: { class: 'w-full h-full flex items-center justify-center' }
 })
 export class ProyectsSelector implements OnInit, AfterViewInit, OnDestroy {
 

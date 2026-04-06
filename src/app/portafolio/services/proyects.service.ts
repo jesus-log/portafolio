@@ -4,7 +4,7 @@ import { Proyect } from '../interfaces/Proyect.interface';
 
 const proyects: Proyect[] = [
   {
-    id:0,
+    id: 0,
     title: 'E‑commerce',
     description: 'Aplicación e‑commerce desarrollada con Angular 19 que incluye autenticación de usuarios, catálogo de productos y un panel de administración para gestionar el inventario. Permite añadir, editar y eliminar productos mediante una interfaz intuitiva y segura.',
     img: 'https://picsum.photos/400/300?random=1',
@@ -27,15 +27,6 @@ const proyects: Proyect[] = [
           "Filtros por categoría, precio y disponibilidad",
           "Búsqueda en tiempo real",
           "Página de detalle con descripción completa"
-        ]
-      },
-      {
-        title: "Carrito de compras",
-        caracteristic: [
-          "Añadir y eliminar productos del carrito",
-          "Actualización automática de cantidades",
-          "Cálculo del total en tiempo real",
-          "Carrito persistente por usuario"
         ]
       },
       {
@@ -94,90 +85,95 @@ const proyects: Proyect[] = [
     ],
   },
   {
-    id:1,
-    title: "E‑commerce de Ropa Urbana",
+    id: 1,
+    title: "Market tracking app",
     description:
-      "Aplicación de comercio electrónico enfocada en moda urbana. Incluye autenticación de usuarios, carrito persistente y un panel de administración para gestionar productos, inventario e imágenes.",
+      "Aplicación para consultar criptomonedas en tiempo real y visualizar su evolución. Puedes ver su valor en diferentes divisas y filtrar por nombre o precio.",
     img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-    video: '',
+    video: 'videos/bitcoinVd.mp4',
     caracteristics: [
       {
-        title: "Autenticación de usuarios",
+        title: "Listado de criptomonedas",
         caracteristic: [
-          "Registro y login con validación",
-          "Protección de rutas mediante JWT",
-          "Gestión de sesiones persistentes",
-          "Recuperación de contraseña"
+          "Listado de las principales criptomonedas por capitalización de mercado",
+          "Visualización de precios en distintas divisas como USD, EUR, GBP y JPY",
+          "Filtro por nombre o símbolo de la moneda",
+          "Filtro por precio mínimo",
+          "Tabla con precio actual, variación en 24h y volumen total"
         ]
       },
       {
-        title: "Catálogo de productos",
+        title: "Detalle de moneda",
         caracteristic: [
-          "Listado dinámico con filtros por categoría",
-          "Búsqueda en tiempo real",
-          "Página de detalle con imágenes y tallas",
-          "Actualización automática del stock"
-        ]
-      },
-      {
-        title: "Panel de administración",
-        caracteristic: [
-          "Crear, editar y eliminar productos",
-          "Subida de imágenes",
-          "Gestión de inventario",
-          "Control de precios y descuentos"
+          "Vista detallada de cada criptomoneda en un modal",
+          "Gráfica histórica de precio con rangos de 7, 30 y 90 días",
+          "Indicadores económicos como market cap, volumen 24h, ATH y ATL",
+          "Datos de oferta circulante y oferta máxima",
+          "Cambio porcentual acumulado en 7 y 30 días"
         ]
       }
     ],
     tecnologies: [
       { name: "Angular", img: "https://angular.io/assets/images/logos/angular/angular.svg" },
-      { name: "TailwindCSS", img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
-      { name: "Node.js", img: "https://nodejs.org/static/images/logo.svg" },
-      { name: "MongoDB", img: "https://www.svgrepo.com/show/331488/mongodb.svg" },
-      { name: "JWT", img: "https://cdn.worldvectorlogo.com/logos/jwt-3.svg" }
+      { name: "TypeScript", img: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg" },
+      { name: "Bootstrap", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" },
+      { name: "Chart.js", img: "https://www.chartjs.org/media/logo-title.svg" },
+      { name: "RxJS", img: "https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png" },
+      { name: "CoinGecko API", img: "https://static.coingecko.com/s/coingecko-logo-343e5d5f7faf0d239cc5e37f2bf9d137c3a30f2b6d6f8b5b6cdbf8b0b2c1f6f7.png" }
     ]
   },
   {
-    id:2,
-    title: "Dashboard de Gestión de Proyectos",
+    id: 2,
+    title: "Dashboard geográfico",
     description:
-      "Plataforma para gestionar proyectos, tareas y equipos. Incluye autenticación, roles de usuario y un panel avanzado con estadísticas y gráficos.",
-    img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
-    video: '',
+      "Aplicación para buscar y explorar países por capital, nombre o región. Incluye una vista detallada de cada país, un mapa interactivo con Mapbox y una interfaz responsive adaptada a móvil y escritorio.",
+    img: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2",
+    video: "videos/findAtlasVd.mp4",
     caracteristics: [
       {
-        title: "Autenticación de usuarios",
+        title: "Búsqueda de países",
         caracteristic: [
-          "Login con roles (admin / usuario)",
-          "Protección de rutas",
-          "Sesiones seguras con JWT",
-          "Gestión de permisos"
+          "Búsqueda por capital",
+          "Búsqueda por nombre del país",
+          "Filtro por región",
+          "Mensajes de error y estados de carga"
         ]
       },
       {
-        title: "Gestión de proyectos",
+        title: "Vista de detalle",
         caracteristic: [
-          "Crear y editar proyectos",
-          "Asignar tareas a miembros del equipo",
-          "Seguimiento del progreso",
-          "Historial de actividad"
+          "Información principal de cada país",
+          "Bandera, población, región y zona horaria",
+          "Código identificador del país",
+          "Acceso directo a visualización en mapa"
         ]
       },
       {
-        title: "Panel de administración",
+        title: "Mapa interactivo",
         caracteristic: [
-          "Gestión de usuarios",
-          "Control de roles y permisos",
-          "Dashboard con estadísticas",
-          "Gráficos dinámicos"
+          "Visualización de la ubicación del país en Mapbox",
+          "Marcador sobre coordenadas del país",
+          "Ruta dinámica con parámetros",
+          "Diseño ajustado al espacio disponible en pantalla"
+        ]
+      },
+      {
+        title: "Interfaz responsive",
+        caracteristic: [
+          "Menú responsive con versión móvil desplegable",
+          "Tabla en escritorio y tarjetas en móvil",
+          "Diseño adaptable a distintas resoluciones",
+          "Navegación optimizada para móvil y desktop"
         ]
       }
     ],
     tecnologies: [
       { name: "Angular", img: "https://angular.io/assets/images/logos/angular/angular.svg" },
       { name: "TypeScript", img: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { name: "Express", img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" },
-      { name: "MySQL", img: "https://www.svgrepo.com/show/303251/mysql-logo.svg" },
+      { name: "Tailwind CSS", img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+      { name: "DaisyUI", img: "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg" },
+      { name: "Mapbox", img: "https://upload.wikimedia.org/wikipedia/commons/1/17/Mapbox_logo_2019.svg" },
+      { name: "RxJS", img: "https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png" },
       { name: "Git", img: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg" }
     ]
   }
@@ -189,7 +185,7 @@ const proyects: Proyect[] = [
 export class ProyectsService {
 
   private proyects = signal<Proyect[]>([]);
-  readonly proyects$ =  this.proyects.asReadonly(); // público pero inmutable
+  readonly proyects$ = this.proyects.asReadonly(); // público pero inmutable
 
   constructor() {
     this.proyects.set(proyects)

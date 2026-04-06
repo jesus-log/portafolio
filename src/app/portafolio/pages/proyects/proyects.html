@@ -1,10 +1,20 @@
-<div class="relative overflow-hidden h-[calc(100vh-133px)] w-screen flex">
+<div class="relative h-dvh w-screen flex overflow-x-hidden overflow-y-auto">
+  <button
+    type="button"
+    (click)="goBack()"
+    aria-label="Volver"
+    class="absolute top-2 left-2 md:top-4 md:left-4 z-20 flex items-center justify-center rounded-full md:rounded-lg bg-black/55 text-base md:text-sm font-semibold text-white backdrop-blur-md transition hover:bg-black/70 w-9 h-9 md:w-auto md:h-auto md:px-4 md:py-2"
+  >
+    <span class="md:hidden" aria-hidden="true">←</span>
+    <span class="hidden md:inline">← Volver</span>
+  </button>
+
   @if (proyect()?.video) {
   <video class="absolute inset-0 w-full h-full object-cover blur-lg scale-110" [src]="proyect()?.video" autoplay loop muted playsinline></video>
   <div class="absolute inset-0 bg-black/60"></div>
   }
 
-  <div class="relative z-10 w-full h-full flex">
+  <div class="relative z-10 w-full h-full min-h-0 flex flex-col md:flex-row overflow-x-hidden overflow-y-auto">
     <!-- Selector proyectos -->
     <proyects-selector (proyect)="setProyect($event)"></proyects-selector>
     <!-- selector proyectos -->

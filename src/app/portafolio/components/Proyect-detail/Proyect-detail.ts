@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, input, viewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, effect, ElementRef, input, OnDestroy, viewChild } from '@angular/core';
 import { Proyect } from '../../interfaces/Proyect.interface';
 import Swiper from 'swiper/bundle';
 import 'swiper/css/navigation';
@@ -9,24 +9,55 @@ import { Navigation, Pagination } from 'swiper/modules';
   selector: 'proyect-detail',
   imports: [],
   templateUrl: './Proyect-detail.html',
-  host: { class: 'w-[60%]' }
+  host: { class: 'w-full md:w-[170%]' },
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProyectDetail implements AfterViewInit {
+export class ProyectDetail implements AfterViewInit, OnDestroy {
 
   proyect = input.required<Proyect | undefined>();
   swiperContainer = viewChild.required<ElementRef>('swiperContainer');
+  private swiper?: Swiper;
+  private viewInitialized = false;
+
+  constructor() {
+    effect(() => {
+      this.proyect();
+
+      if (!this.viewInitialized) {
+        return;
+      }
+
+      requestAnimationFrame(() => this.initSwiper());
+    });
+  }
 
   ngAfterViewInit() {
-    if (this.swiperContainer) {
-      new Swiper(this.swiperContainer().nativeElement, {
-        modules: [
-          Navigation
-        ],
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    }
+    this.viewInitialized = true;
+    this.initSwiper();
+  }
+
+  ngOnDestroy(): void {
+    this.swiper?.destroy(true, true);
+    this.swiper = undefined;
+  }
+
+  private initSwiper(): void {
+    const container = this.swiperContainer().nativeElement;
+
+    this.swiper?.destroy(true, true);
+    this.swiper = new Swiper(container, {
+      modules: [Navigation, Pagination],
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+    });
   }
 }
