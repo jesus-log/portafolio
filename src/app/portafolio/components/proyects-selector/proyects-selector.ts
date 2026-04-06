@@ -3,13 +3,12 @@ import { ProyectsService } from '../../services/proyects.service';
 import { Proyect } from '../../interfaces/Proyect.interface';
 import Swiper from 'swiper/bundle';
 import { EffectCards } from 'swiper/modules';
-import 'swiper/css/effect-cards';
 
 @Component({
   selector: 'proyects-selector',
   imports: [],
   templateUrl: './proyects-selector.html',
-  host: { class: 'w-full h-full flex items-center justify-center' }
+  host: { class: 'w-full h-full flex items-center justify-center md:w-[40%]' }
 })
 export class ProyectsSelector implements OnInit, AfterViewInit, OnDestroy {
 

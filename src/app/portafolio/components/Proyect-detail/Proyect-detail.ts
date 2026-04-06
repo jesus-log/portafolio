@@ -1,15 +1,13 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, effect, ElementRef, input, OnDestroy, viewChild } from '@angular/core';
 import { Proyect } from '../../interfaces/Proyect.interface';
 import Swiper from 'swiper/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 @Component({
   selector: 'proyect-detail',
   imports: [],
   templateUrl: './Proyect-detail.html',
-  host: { class: 'w-full md:w-[170%]' },
+  host: { class: 'w-full h-full md:w-[60%]' },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProyectDetail implements AfterViewInit, OnDestroy {
