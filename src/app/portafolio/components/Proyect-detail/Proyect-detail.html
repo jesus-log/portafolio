@@ -1,29 +1,27 @@
-<div class="w-full h-full flex flex-col md:justify-center items-center px-4 md:px-6 py-3 md:py-0 overflow-y-auto">
+<div class="w-full h-auto md:h-full flex flex-col items-center px-4 md:px-6 py-3 md:py-0 overflow-y-auto">
 
-    <h1 class="w-full hidden md:block text-md md:text-2xl font-extrabold mt-9 mb-4 text-center text-white">{{proyect()?.title}}</h1>
+    <h1 class="w-full text-lg md:text-2xl font-extrabold mt-5 mb-7 text-center text-white">{{proyect()?.title}}</h1>
 
     <div class="w-full flex items-center min-h-0">
-      <div class="w-full flex flex-col justify-center items-center gap-3 md:gap-4 min-h-0">
+      <div class="w-full flex flex-col items-center gap-3 md:gap-4 min-h-0 md:justify-center">
         <!-- Description -->
-        <div class="w-full h-auto md:h-[15vh] text-xs p-4 flex justify-center items-center rounded-xl bg-black/40 backdrop-blur-md text-white">
+        <div class="w-full h-auto md:h-[15vh] text-sm p-4 flex justify-center items-center rounded-xl bg-black/40 backdrop-blur-md text-white">
           {{proyect()?.description}}
         </div>
         <!-- description -->
 
         <!-- Carateristicas -->
-        <div class="w-full h-auto md:h-full py-3 md:py-4 px-2 flex flex-col rounded-xl bg-black/50 backdrop-blur-md">
+        <div class="order-1 w-full h-auto md:h-full py-3 md:py-4 px-2 flex flex-col rounded-xl bg-black/50 backdrop-blur-md">
 
           <h2 class="text-md md:text-xl w-full text-center text-white"> <b>Funcionalidades</b> &#9881; </h2>
 
-          <div #swiperContainer class="swiper relative w-full max-w-3xl mx-auto h-[18vh] md:h-[20vh]">
+          <div #swiperContainer class="project-detail-swiper swiper relative w-full max-w-3xl mx-auto h-[35vh] md:h-[20vh]">
             <div class="swiper-wrapper mt-5">
               @for (carac of proyect()?.caracteristics; track $index) {
               <div class="swiper-slide p-4">
-                <ul class="list-disc list-inside flex flex-col justify-center gap-1 h-[70%] w-[80%] md:ml-45">
+                <ul class="list-disc list-outside pl-5 pr-2 flex flex-col justify-center gap-1 h-[70%] w-full md:w-[80%] md:ml-45">
                   @for (frase of carac.caracteristic; track $index) {
-                  <li>
-                    <p class="inline text-white text-xs md:text-md">{{frase}}</p>
-                  </li>
+                  <li class="pl-1 text-white text-sm md:text-md leading-snug">{{frase}}</li>
                   }
                 </ul>
               </div>
@@ -39,13 +37,13 @@
       </div>
     </div>
 
-    <div class="h-auto md:h-40 flex flex-wrap justify-center items-center gap-3 py-2">
+    <div class="order-2 mt-2 md:mt-3 h-auto md:h-40 flex flex-wrap justify-center items-center gap-3 py-2">
       @for (tec of proyect()?.tecnologies; track $index) {
       <div class="mx-2 w-20 h-21 flex flex-col justify-end items-center rounded-lg shadow-md p-4 bg-black/40 backdrop-blur-md">
         <div class="h-[90%] w-full flex justify-center items-center">
           <img [src]="tec.img" alt="" class="max-w-9 brightness-125">
         </div>
-        <h3 class="text-xs text-center mt-1 text-white">{{tec.name}}</h3>
+        <h3 class="text-sm text-center mt-1 text-white">{{tec.name}}</h3>
       </div>
       }
     </div>

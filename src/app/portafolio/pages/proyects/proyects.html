@@ -1,4 +1,4 @@
-<div class="relative h-dvh w-screen flex overflow-x-hidden overflow-y-auto">
+<div class="relative h-dvh w-screen flex overflow-hidden">
   <button
     type="button"
     (click)="goBack()"
@@ -14,7 +14,7 @@
   <div class="absolute inset-0 bg-black/60"></div>
   }
 
-  <div class="relative z-10 w-full h-full min-h-0 flex flex-col md:flex-row overflow-x-hidden overflow-y-auto">
+  <div class="relative z-10 w-full h-full min-h-0 flex flex-col md:flex-row overflow-x-hidden overflow-y-auto overscroll-y-contain">
     <!-- Selector proyectos -->
     <proyects-selector (proyect)="setProyect($event)"></proyects-selector>
     <!-- selector proyectos -->

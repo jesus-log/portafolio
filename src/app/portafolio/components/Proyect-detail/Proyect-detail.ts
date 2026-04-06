@@ -7,7 +7,7 @@ import { Navigation, Pagination } from 'swiper/modules';
   selector: 'proyect-detail',
   imports: [],
   templateUrl: './Proyect-detail.html',
-  host: { class: 'w-full h-full md:w-[60%]' },
+  host: { class: 'w-full h-auto min-h-[85dvh] md:min-h-0 md:h-full md:w-[60%]' },
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProyectDetail implements AfterViewInit, OnDestroy {

@@ -5,6 +5,42 @@
 @import 'swiper/css/effect-cards';
 @plugin "daisyui";
 
+.project-detail-swiper .swiper-button-next,
+.project-detail-swiper .swiper-button-prev {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-top: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.project-detail-swiper .swiper-button-prev {
+  left: -0.4rem;
+}
+
+.project-detail-swiper .swiper-button-next::after,
+.project-detail-swiper .swiper-button-prev::after {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .project-detail-swiper .swiper-button-next,
+  .project-detail-swiper .swiper-button-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .project-detail-swiper .swiper-button-prev {
+    left: 0.625rem;
+  }
+
+  .project-detail-swiper .swiper-button-next::after,
+  .project-detail-swiper .swiper-button-prev::after {
+    font-size: 1.25rem;
+  }
+}
+
 
 
 /* .swiper-button-next { right: 10px; } */
