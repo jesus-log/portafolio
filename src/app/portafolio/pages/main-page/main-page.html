@@ -2,22 +2,22 @@
 
 
   <!-- linea horizontal -->
-<!--   <div class="hidden md:absolute top-[65px] left-[1%] h-[1px]  bg-black origin-left"
+  <!--   <div class="hidden md:absolute top-[65px] left-[1%] h-[1px]  bg-black origin-left"
     [class]=" loading() ? 'w-0 animate-grow-right [animation-delay:1.5s]' : 'animate-grow-right-inverse w-[98%] [animation-delay:1s]' ">
   </div> -->
 
   <!-- linea vertical -->
-<!--   <div class=" hidden md:absolute top-[2%] left-[10%] h-0 w-[1px] bg-black origin-top"
+  <!--   <div class=" hidden md:absolute top-[2%] left-[10%] h-0 w-[1px] bg-black origin-top"
     [class]=" loading() ? 'animate-grow-down [animation-delay:1s]' : 'h-[90%] animate-grow-down-inverse [animation-delay:2s]' ">
   </div> -->
 
   <!-- linea vertical -->
-<!--   <div class=" hidden md:absolute top-[2%] left-[86%] h-0 w-[1px] bg-black origin-top"
+  <!--   <div class=" hidden md:absolute top-[2%] left-[86%] h-0 w-[1px] bg-black origin-top"
     [class]=" loading() ? 'animate-grow-down [animation-delay:2s]' : 'h-[90%] animate-grow-down-inverse' ">
   </div> -->
 
   <!-- linea horizontal -->
-<!--   <div
+  <!--   <div
     class=" hidden md:absolute top-[calc(100vh-68px)] left-[1%] h-[1px]  bg-black origin-left w-0 animate-grow-right [animation-delay:8s]">
   </div> -->
 
@@ -29,24 +29,40 @@
     @if (this.fraseNumber() == 0 || this.fraseNumber() == 1) {
     <span class="overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'w-0 animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      <b>Hola</b>, soy Jesús <p class="hidden sm:inline"> y este es mi portafolio</p>
+      Hola, soy Jesús <b>full‑stack developer</b>
+      <p class="hidden sm:inline"> y este es mi portafolio</p>
     </span>
     }
     @if (this.fraseNumber() == 2 || this.fraseNumber() == 3) {
     <span class="overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'w-0 animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' "><b>Full‑stack
-        developer</b> con
-      experiencia <p class="hidden md:inline">en frontend moderno y backend sólido</p> </span>
+      [class]="typing() ? 'w-0 animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Desarrollo
+      interfaces con <b>Angular</b> y <b>TypeScript</b>
+      <p class="hidden md:inline">, rápidas, accesibles y mantenibles</p>
+    </span>
     }
     @if (this.fraseNumber() == 4 || this.fraseNumber() == 5) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Especializado en
-      <b>Angular 19</b>
-      <p class="hidden md:inline">, frontend basado en <b>señales</b> y <b>observables</b> con <b>rxjs</b></p>
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
+      En backend, trabajo con <b>JAVA</b>,<b> PHP</b> y <b>Node</b>
+      <p class="hidden md:inline"> además de <b>MYSQL</b>, <b>PostgreSQL</b></p>
     </span>
     }
+    <!--     @if (this.fraseNumber() == 4 || this.fraseNumber() == 5) {
+    <span class="w-0 overflow-hidden whitespace-nowrap"
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Especializado en
+      <b>Angular</b>
+      <p class="hidden md:inline">, frontend basado en <b>señales</b> y <b>observables</b> con <b>rxjs</b></p>
+    </span>
+    } -->
 
     @if (this.fraseNumber() == 6 || this.fraseNumber() == 7) {
+    <span class="w-0 overflow-hidden whitespace-nowrap"
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
+      Para el diseño con CSS, uso <b>Tailwind</b>
+      <p class="hidden md:inline">, realizo <b>paginación</b> y creo <b>animaciones</b></p>
+    </span>
+    }
+    @if (this.fraseNumber() == 8 || this.fraseNumber() == 9) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Puedes ver mis
       <b>commits</b> diarios en
@@ -55,34 +71,36 @@
       </p>
     </span>
     }
-    @if (this.fraseNumber() == 8 || this.fraseNumber() == 9) {
-    <span class="w-0 overflow-hidden whitespace-nowrap"
-      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      En backend, he trabajado con <b>JAVA</b>,<b> PHP</b>
-      <p class="hidden md:inline"> y <b> Node</b>, además de <b>MYSQL</b>, <b>PostgreSQL</b></p>
-    </span>
-    }
     @if (this.fraseNumber() == 10 || this.fraseNumber() == 11) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      Para el diseño con CSS, uso <b>Tailwind</b>
-      <p class="hidden md:inline">, realizo <b>paginación</b> y creo <b>animaciones</b></p>
+      Familiarizado con el <b>flujo de trabajo</b> usándo <b>GIT</b>
+      <p class="hidden md:inline"> y tickets con <b>JIRA</b></p>
     </span>
     }
 
     @if (this.fraseNumber() == 12 || this.fraseNumber() == 13) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      Familiarizado con el <b>flujo de trabajo</b>
-      <p class="hidden md:inline">, usándo <b>GIT</b> y tickets con <b>JIRA</b></p>
+      Experiencia en metodología <b>Scrum</b>
+      <p class="hidden md:inline">, con <b>sprints</b> y <b>dialys</b></p>
     </span>
     }
 
     @if (this.fraseNumber() == 14 || this.fraseNumber() == 15) {
     <span class="w-0 overflow-hidden whitespace-nowrap"
+      [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">Login
+      <b>JWTs</b>, <b>reactive forms</b>, <b>pipes</b>
+      <p class="hidden md:inline">, routing, <b>guards</b>
+      </p>
+    </span>
+
+
+    }
+    @if (this.fraseNumber() == 16 || this.fraseNumber() == 17) {
+    <span class="w-0 overflow-hidden whitespace-nowrap"
       [class]="typing() ? 'animate-typing' : 'w-[100%] animate-typing-delete [animation-delay:1s]' ">
-      Experiencia en metodología <b>Scrum</b>
-      <p class="hidden md:inline">, con <b>sprints</b> y <b>dialys</b></p>
+      Me adapto rápido a nuevos dominios y tecnologías
     </span>
     }
 
@@ -99,7 +117,7 @@
 
   </div>
 
-  <div class="absolute top-[70%] left-[37%]">
+  <div class="absolute top-[70%] left-[37%] animate-fade-in opacity-0 [animation-delay:1s]">
     <a routerLink="/proyectos" class="btn btn-accent md:hidden">
       Ver proyectos
     </a>
