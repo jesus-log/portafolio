@@ -1,59 +1,109 @@
 # Portafolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Aplicación web de portafolio desarrollada con Angular 21 para mostrar proyectos, tecnologías y demos.
 
-## Development server
+## Demo
 
-To start a local development server, run:
 
-```bash
-ng serve
+```text
+https://logronoj-portfolio.netlify.app/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías
 
-## Code scaffolding
+- Angular 21 (standalone components)
+- TypeScript
+- Tailwind CSS 4 + DaisyUI
+- Swiper
+- RxJS
+- Vitest (tests unitarios)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Funcionalidades
 
-```bash
-ng generate component component-name
+- Página principal con animación de carga y texto dinámico.
+- Sección de proyectos con vista de detalle.
+- Navegación por rutas:
+	- `/` -> página principal
+	- `/proyectos` -> listado/detalle de proyectos
+- Fallback de rutas desconocidas hacia la principal.
+- Datos de proyectos gestionados desde un servicio local.
+
+## Estructura del proyecto
+
+```text
+src/
+	app/
+		portafolio/
+			components/
+				footer/
+				nav-bar/
+				Proyect-detail/
+				proyects-selector/
+			interfaces/
+			pages/
+				main-page/
+				proyects/
+			services/
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Requisitos
+
+- Node.js 20+
+- npm 10+
+
+## Instalación
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+## Scripts disponibles
 
 ```bash
-ng build
+# Desarrollo
+npm start
+
+# Build de producción
+npm run build
+
+# Build en modo watch
+npm run watch
+
+# Tests unitarios
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+La app de desarrollo queda disponible en:
 
-## Running unit tests
+```text
+http://localhost:4200
+```
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Build y despliegue
+
+Genera el build con:
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Los artefactos se generan en la carpeta de salida configurada por Angular para producción.
 
-For end-to-end (e2e) testing, run:
+## Testing
+
+El proyecto usa el runner unitario de Angular con Vitest:
 
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Próximas mejoras
 
-## Additional Resources
+- Internacionalización (ES/EN).
+- Filtros por tecnología en la sección de proyectos.
+- Migración de datos a un backend o CMS.
+- SEO técnico (meta tags dinámicos y Open Graph).
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Autor
+
+Portafolio creado por Jesus.
