@@ -5,8 +5,9 @@
     <div class="w-full flex items-center min-h-0">
       <div class="w-full flex flex-col items-center gap-3 md:gap-4 min-h-0 md:justify-center">
         <!-- Description -->
-        <div class="w-full h-auto md:h-[15vh] text-sm p-4 flex justify-center items-center rounded-xl bg-black/40 backdrop-blur-md text-white">
+        <div class="w-full h-auto md:h-[15vh] text-sm p-4 flex flex-col justify-center items-center rounded-xl bg-black/40 backdrop-blur-md text-white">
           {{proyect()?.description}}
+          <a href="{{proyect()?.enlace}}" class="md:mt-3"><b>Visitar proyecto</b></a>
         </div>
         <!-- description -->
 

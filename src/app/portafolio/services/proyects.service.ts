@@ -9,6 +9,7 @@ const proyects: Proyect[] = [
     description: 'Aplicación e‑commerce desarrollada con Angular 19 que incluye autenticación de usuarios, catálogo de productos y un panel de administración para gestionar el inventario. Permite añadir, editar y eliminar productos mediante una interfaz intuitiva y segura.',
     img: 'https://picsum.photos/400/300?random=1',
     video: 'videos/tesloShopVd.mp4',
+    enlace:'https://tesloshopfront-1.netlify.app/',
     caracteristics: [
 
       {
@@ -91,6 +92,7 @@ const proyects: Proyect[] = [
       "Aplicación para consultar criptomonedas en tiempo real y visualizar su evolución. Puedes ver su valor en diferentes divisas y filtrar por nombre o precio.",
     img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
     video: 'videos/bitcoinVd.mp4',
+    enlace:'https://coinmarket-bit.netlify.app/',
     caracteristics: [
       {
         title: "Listado de criptomonedas",
@@ -129,6 +131,7 @@ const proyects: Proyect[] = [
       "Aplicación para buscar y explorar países por capital, nombre o región. Incluye una vista detallada de cada país, un mapa interactivo con Mapbox y una interfaz responsive adaptada a móvil y escritorio.",
     img: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2",
     video: "videos/findAtlasVd.mp4",
+    enlace:'https://find-atlas.netlify.app/',
     caracteristics: [
       {
         title: "Búsqueda de países",

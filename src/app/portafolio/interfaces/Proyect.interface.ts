@@ -6,6 +6,7 @@ export  interface Proyect{
   video?: string,
   caracteristics: caracteristic[],
   tecnologies: Tecnology [],
+  enlace:string
 }
 
 export interface Tecnology{
