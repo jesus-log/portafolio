@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './main-page.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

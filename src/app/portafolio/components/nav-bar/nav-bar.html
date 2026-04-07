@@ -1,15 +1,14 @@
 <div class="w-full h-14.5 md:h-auto">
-  <div class="navbar opacity-0 w-0 bg-base-100 shadow-sm animate-fill [animation-delay:2.5s] p-0">
+  <div class="navbar opacity-0 w-0 bg-base-100 shadow-sm animate-fill [animation-delay:0.5s] md:[animation-delay:2.5s] p-0">
     <div class=" ml-3 navbar-start opacity-0 animate-fade-in [animation-delay:2.9s]">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
             <img alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              src="img/FOTO-JESUS.jpg" />
           </div>
         </div>
         <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a routerLink="">Inicio</a></li>
           <li><a routerLink="proyectos">Proyectos</a></li>
 <!--           <li>
             <a>Parent</a>
@@ -21,7 +20,7 @@
           <li><a>Item 3</a></li> -->
         </ul>
       </div>
-      <div class="opacity-0 ml-3 animate-fade-in [animation-delay:7s]">
+      <div class="opacity-0 ml-3 animate-fade-in [animation-delay:1s] md:[animation-delay:7s]">
         <h3 class="inline text-md md:text-xl" > <b>Jesús Logroño</b></h3>
         <svg class="ml-1 inline" width="10" height="10" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="12" fill="#0095F6" />
@@ -45,8 +44,15 @@
         <li><a>Item 3</a></li> -->
       </ul>
     </div>
-    <div class="navbar-end animate-fade-in opacity-0 [animation-delay:3.4s] mr-3">
-      <a class="btn btn-accent animate-pulse-soft [animation-delay:4.5s]">Descargar Curriculum</a>
+    <div class="navbar-end animate-fade-in opacity-0 [animation-delay:1s] md:[animation-delay:3.4s] mr-3">
+      <a
+        class="btn btn-accent animate-pulse-soft [animation-delay:4.5s]"
+        href="/cv/CV-Jesus-Logrono.pdf"
+        download="CV-Jesus-Logrono.pdf"
+      >
+        <span class="md:hidden">Descargar CV</span>
+        <span class="hidden md:inline">Descargar Curriculum</span>
+      </a>
     </div>
   </div>
 
