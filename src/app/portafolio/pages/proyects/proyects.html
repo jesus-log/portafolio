@@ -1,4 +1,10 @@
 <div class="relative h-dvh w-screen flex overflow-hidden">
+  @if (loading()) {
+  <div class="absolute inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" aria-live="polite" aria-busy="true">
+    <span class="loading loading-spinner loading-lg text-white"></span>
+  </div>
+  }
+
   <button
     type="button"
     (click)="goBack()"

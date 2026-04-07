@@ -56,7 +56,7 @@ const proyects: Proyect[] = [
         img: "https://angular.io/assets/images/logos/angular/angular.svg"
       },
       {
-        name: "TailwindCSS",
+        name: "Tailwind",
         img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
       },
       {
@@ -173,7 +173,7 @@ const proyects: Proyect[] = [
     tecnologies: [
       { name: "Angular", img: "https://angular.io/assets/images/logos/angular/angular.svg" },
       { name: "TypeScript", img: "https://cdn.worldvectorlogo.com/logos/typescript.svg" },
-      { name: "Tailwind CSS", img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+      { name: "Tailwind", img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
       { name: "DaisyUI", img: "https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg" },
       { name: "Mapbox", img: "https://upload.wikimedia.org/wikipedia/commons/1/17/Mapbox_logo_2019.svg" },
       { name: "RxJS", img: "https://rxjs.dev/generated/images/marketing/home/Rx_Logo-512-512.png" },
